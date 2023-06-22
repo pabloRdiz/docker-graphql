@@ -22,9 +22,9 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |        
-        echo -e "\033[31mStart Login."  
+        echo "Starting Login."  
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-        echo -e "\033[0mEnding login"
+        echo "Ending login"
         
       
 #     - name: Build the Docker image
