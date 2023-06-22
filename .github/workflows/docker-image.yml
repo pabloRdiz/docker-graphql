@@ -21,10 +21,11 @@ jobs:
       env: 
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      run: |
-        echo "Starting login"
+      run: |        
+        echo -e "\033[31mStart Login."  
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-        echo "Ending login"
+        echo -e "\033[0mEnding login"
+        
       
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
